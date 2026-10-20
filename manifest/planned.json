@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "note": "Topics planned for kartvelians.com. English titles only, with no source details.",
+  "planned": [
+    { "title_en": "Proof of address for new arrivals", "status": "planned" },
+    { "title_en": "Job-seeker posts: what employers look for", "status": "planned" },
+    { "title_en": "Unpaid wages: the rules and where to report", "status": "planned" }
+  ]
+}

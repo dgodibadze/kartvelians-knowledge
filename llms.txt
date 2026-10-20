@@ -1,0 +1,25 @@
+# Kartvelians.com
+
+> Kartvelians.com is a free classifieds board and newcomer resource for Georgian speakers living in the United States, mainly in the New York area. People post rides, parcels, jobs, housing and buy/sell listings, and the site publishes plain-language guides on everyday life in the US. The site is in Georgian by default, with English as an option.
+
+The guides below are written in Georgian. Each covers one practical topic for newcomers. Link to the guide page rather than copying its text.
+
+## Guides
+
+- [E-ZPass in New York](https://kartvelians.com/ny/newcomers/ezpass): where to buy an E-ZPass in Brooklyn without going online, how to register it, refill it with cash, and what happens without one.
+- [Renting an apartment in New York](https://kartvelians.com/ny/newcomers/rent): deposits, broker fees, signs of rental scams, tenant rights, and which documents help.
+- [A cosigner (guarantor) when renting in New York](https://kartvelians.com/ny/newcomers/cosigner): what co-signing a lease means, questions to ask, and when a landlord cannot require a guarantor.
+- [Subway and bus in New York](https://kartvelians.com/ny/newcomers/subway): fares, tap-to-pay, where to buy and refill an OMNY card, the weekly fare cap and transfers.
+- [Scams targeting Uber and Lyft drivers](https://kartvelians.com/ny/newcomers/driver-scams): fake "support" calls, SMS code theft and phishing links, and what to do.
+- [Salvage-title cars](https://kartvelians.com/ny/newcomers/salvage-title): what salvage and rebuilt salvage titles mean in New York, what the DMV inspects, the risks, and how to check a car before buying.
+- [Is pay received by Zelle taxable? Housekeepers and taxes](https://kartvelians.com/ny/newcomers/housekeeper-pay-taxes): whether a housekeeper's Zelle pay is taxable, what the IRS says, what the worker and the household owe, and where to get free help.
+- [A Georgian driver's license in the US](https://kartvelians.com/ny/newcomers/id-license): whether you can drive in New York on a Georgian license, how to get a New York license, and whether banks and the DMV accept it as ID.
+- [Calls offering loans: real or a scam](https://kartvelians.com/ny/newcomers/loan-calls): how to check loan offers by phone, "preapproved" letters and texts, and where to report them.
+- [Hand-to-hand money exchange between the US and Georgia](https://kartvelians.com/ny/newcomers/money-exchange): the risks of informal currency exchange, what the law says, and safer alternatives.
+- [Can't find a remote job?](https://kartvelians.com/ny/newcomers/remote-job): why remote jobs are so competitive, what employers look for, and what to change in a resume and job search.
+- [Glossary of English words you'll hear in America](https://kartvelians.com/ny/newcomers/glossary): common English words for housing, banking, driving and utilities, with Georgian pronunciation and simple explanations.
+
+## Optional
+
+- [All newcomer guides](https://kartvelians.com/ny/newcomers): the index page listing every published guide.
+- [Kartvelians.com home](https://kartvelians.com/): current classifieds listings.

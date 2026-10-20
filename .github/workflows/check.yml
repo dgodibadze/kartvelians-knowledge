@@ -1,0 +1,28 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check-manifest.mjs --live
+      - run: npm ci
+        working-directory: mcp-server
+      - run: npx tsc
+        working-directory: mcp-server
+      - name: End-to-end MCP test against wrangler dev
+        working-directory: mcp-server
+        run: |
+          npx wrangler dev --local --port 8787 > /tmp/dev.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf http://localhost:8787/ >/dev/null && break; sleep 1; done
+          node ../scripts/test-search.mjs

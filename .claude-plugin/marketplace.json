@@ -1,0 +1,12 @@
+{
+  "name": "kartvelians",
+  "owner": { "name": "kartvelians.com" },
+  "description": "Kartvelians.com newcomer guides for Georgian speakers in the US.",
+  "plugins": [
+    {
+      "name": "kartvelians-knowledge",
+      "source": "./plugin",
+      "description": "Kartvelians.com newcomer guides for Georgian speakers in the US: short summaries and links."
+    }
+  ]
+}

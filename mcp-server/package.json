@@ -1,0 +1,24 @@
+{
+  "name": "kartvelians-knowledge-mcp",
+  "version": "0.1.0",
+  "description": "Read-only MCP server for kartvelians.com guides",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc",
+    "check": "node ../scripts/check-manifest.mjs"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "agents": "0.29.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261019.1",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.151.3"
+  },
+  "private": true
+}

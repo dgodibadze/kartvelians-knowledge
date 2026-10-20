@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.kartvelians/knowledge",
+  "title": "Kartvelians.com guides",
+  "description": "Newcomer guides for Georgian speakers in the US: short summaries and links to kartvelians.com.",
+  "websiteUrl": "https://kartvelians.com/ny/newcomers",
+  "repository": {
+    "url": "https://github.com/dgodibadze/kartvelians-knowledge",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://kartvelians.com/mcp"
+    }
+  ]
+}

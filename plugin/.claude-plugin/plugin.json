@@ -1,0 +1,8 @@
+{
+  "name": "kartvelians-knowledge",
+  "version": "0.1.0",
+  "description": "Kartvelians.com newcomer guides for Georgian speakers in the US: short summaries and links, via a skill and a read-only MCP server.",
+  "homepage": "https://kartvelians.com/ny/newcomers",
+  "license": "MIT",
+  "keywords": ["georgian", "georgia", "immigrants", "new-york", "newcomers"]
+}

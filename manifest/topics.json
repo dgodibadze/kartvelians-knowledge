@@ -1,0 +1,329 @@
+{
+  "schema": 1,
+  "source": "https://kartvelians.com/ny/newcomers",
+  "note": "Short summaries written by hand from the published guides. Full guide text is not included. Facts are as stated on each guide on its 'updated' date.",
+  "topics": [
+    {
+      "slug": "ezpass",
+      "title_ka": "E-ZPass ნიუ-იორკში: სად იყიდო ონლაინის გარეშე და როგორ ჩართო",
+      "title_en": "E-ZPass in New York",
+      "summary_en": "How to get an E-ZPass tag in New York without ordering online: buying the On-the-Go tag in a store, registering it, and funding the account, including with cash. It also covers what Tolls by Mail costs, the Manhattan congestion zone, rented cars and toll disputes.",
+      "summary_ka": "როგორ შეიძლება E-ZPass-ის შეძენა ნიუ-იორკში ონლაინ შეკვეთის გარეშე: On-the-Go თეგის ყიდვა მაღაზიაში, მისი რეგისტრაცია და ანგარიშის შევსება, მათ შორის ნაღდი ფულით. სტატია ასევე ეხება Tolls by Mail-ის ღირებულებას, მანჰეტენის გადატვირთულობის ზონას, ნაქირავებ მანქანას და საფასურის გასაჩივრებას.",
+      "key_facts_en": [
+        "The On-the-Go retail tag costs $25 and must be registered online or by phone before use (NYS Thruway Authority).",
+        "MTA bridges and tunnels are cashless. Without a tag, the bill is mailed to the registered owner, and the E-ZPass rate is at least 25% lower (MTA).",
+        "An unpaid Tolls by Mail bill adds a $5 fee after 30 days and up to $50 per crossing after 60 days, and the registration can be suspended (MTA).",
+        "An account can be funded by auto-replenish, by Pay Per Trip from a checking account, or with cash at participating stores (MTA)."
+      ],
+      "key_facts_ka": [
+        "On-the-Go თეგი მაღაზიაში 25 დოლარი ღირს და გამოყენებამდე ონლაინ ან ტელეფონით უნდა დარეგისტრირდეს (NYS Thruway Authority).",
+        "MTA-ის ხიდებსა და გვირაბებზე ნაღდი ფული აღარ მიიღება. თეგის გარეშე ანგარიში ფოსტით მიდის მანქანის რეგისტრირებულ მფლობელთან, E-ZPass-ის ტარიფი კი სულ მცირე 25%-ით იაფია (MTA).",
+        "გადაუხდელ Tolls by Mail ანგარიშს 30 დღის შემდეგ 5 დოლარი ემატება, 60 დღის შემდეგ კი თითო გავლაზე 50 დოლარამდე. მანქანის რეგისტრაციაც შეიძლება შეჩერდეს (MTA).",
+        "ანგარიში ივსება ავტომატურად, ჩეკინგ ანგარიშიდან ყოველი გავლის შემდეგ ან ნაღდი ფულით ზოგიერთ მაღაზიაში (MTA)."
+      ],
+      "keywords_en": ["E-ZPass", "tolls", "toll", "NYC tolls", "Tolls by Mail", "toll bill", "congestion pricing", "On-the-Go", "bridge toll", "tunnel toll", "cashless tolling"],
+      "keywords_ka": ["იზი-ფასი", "თოლი", "თეგი", "საფასური", "ხიდი", "გვირაბი", "გზის საფასური"],
+      "url": "https://kartvelians.com/ny/newcomers/ezpass",
+      "risk": "normal",
+      "updated": "2026-10-09",
+      "status": "published"
+    },
+    {
+      "slug": "rent",
+      "title_ka": "ბინის ქირაობა ნიუ-იორკში: რა უნდა იცოდე, სანამ ფულს გადაიხდი",
+      "title_en": "Renting an apartment in New York",
+      "summary_en": "Renting in New York City and State: legal limits on move-in costs, the NYC broker-fee law, signs of rental scams, and documents landlords often ask for. It also covers setting up utilities, heat and hot water rules, renewal notices and fair-housing protections.",
+      "summary_ka": "ბინის ქირაობა ნიუ-იორკში: შესვლისას გადასახდელი თანხის კანონიერი ზღვარი, ქალაქის კანონი ბროკერის საკომისიოზე, ქირავნობასთან დაკავშირებული თაღლითობის ნიშნები და დოკუმენტები, რომლებსაც მესაკუთრეები ხშირად ითხოვენ. სტატია ასევე ეხება კომუნალურ მომსახურებას, გათბობისა და ცხელი წყლის წესებს, ხელშეკრულების განახლებას და დისკრიმინაციისგან დაცვას.",
+      "key_facts_en": [
+        "A security deposit may not exceed one month's rent, and for most units it must be returned within 14 days after move-out (NY Attorney General).",
+        "A landlord may charge at most $20 for a credit and background check (NY State law, per the Attorney General).",
+        "Since June 11, 2025, the NYC FARE Act bars charging tenants for a broker the landlord hired (NYC DCWP).",
+        "From October 1 to May 31, NYC apartments must be at least 68°F by day when it is below 55°F outside, and at least 62°F at night. Hot water must be at least 120°F all year (NYC HPD).",
+        "Refusing to rent to families with children is illegal in New York (NYC Commission on Human Rights, NYS Division of Human Rights)."
+      ],
+      "key_facts_ka": [
+        "სადეპოზიტო თანხა (security deposit) ერთი თვის ქირას არ უნდა აღემატებოდეს. ბინების უმეტესობისთვის ის გასვლიდან 14 დღეში უნდა დაბრუნდეს (NY Attorney General).",
+        "საკრედიტო და ბიოგრაფიული შემოწმებისთვის მესაკუთრეს მაქსიმუმ 20 დოლარის აღება შეუძლია (ნიუ-იორკის შტატის კანონი, Attorney General-ის მიხედვით).",
+        "2025 წლის 11 ივნისიდან ნიუ-იორკის FARE Act კრძალავს, რომ მოქირავნემ გადაიხადოს იმ ბროკერის საკომისიო, რომელიც მესაკუთრემ აიყვანა (NYC DCWP).",
+        "1 ოქტომბრიდან 31 მაისამდე, როცა გარეთ 55°F-ზე ცივა, ბინაში დღისით სულ მცირე 68°F უნდა იყოს, ღამით კი 62°F. ცხელი წყალი მთელი წლის განმავლობაში სულ მცირე 120°F უნდა იყოს (NYC HPD).",
+        "ბავშვიანი ოჯახისთვის ბინის გაქირავებაზე უარის თქმა ნიუ-იორკში უკანონოა (NYC Commission on Human Rights, NYS Division of Human Rights)."
+      ],
+      "keywords_en": ["rent", "renting", "apartment", "lease", "landlord", "security deposit", "broker fee", "FARE Act", "rental scam", "tenant rights", "heat", "hot water", "utilities"],
+      "keywords_ka": ["ბინა", "ქირა", "ქირაობა", "ლენდლორდი", "მესაკუთრე", "სექიურითი", "ბროკერი", "მაკლერი", "ლიზი", "კონტრაქტი", "გათბობა"],
+      "url": "https://kartvelians.com/ny/newcomers/rent",
+      "risk": "normal",
+      "updated": "2026-10-09",
+      "status": "published"
+    },
+    {
+      "slug": "cosigner",
+      "title_ka": "გარანტორი ბინის ქირაობისას: რა უნდა იცოდე, სანამ ხელს მოაწერ",
+      "title_en": "A cosigner (guarantor) when renting",
+      "summary_en": "What it means to be, or to need, a guarantor (cosigner) on a New York City lease. The guide notes that official sources give no general definition of a lease guaranty, lists questions to ask before signing, and states one NYC rule on when a landlord cannot require a guarantor.",
+      "summary_ka": "რას ნიშნავს ნიუ-იორკში ბინის ქირაობისას გარანტორობა (კოსაინერობა) და რა ხდება, როცა გარანტორი მოქირავნეს სჭირდება. სტატია აღნიშნავს, რომ ოფიციალური წყაროები ქირის გარანტიის ზოგად განმარტებას არ იძლევიან, ჩამოთვლის ხელმოწერამდე დასასმელ კითხვებს და ასახელებს ქალაქის წესს, როცა მესაკუთრეს გარანტორის მოთხოვნა არ შეუძლია.",
+      "key_facts_en": [
+        "FTC guidance on cosigning covers loans, not leases. A lease guaranty is a separate document and its terms can differ (FTC).",
+        "Under FTC guidance, a loan cosigner can owe the full debt plus late fees and collection costs, and the debt can appear on the cosigner's credit report (FTC).",
+        "In NYC, a tenant whose housing voucher sets the rent share by income cannot be required to find a guarantor or co-tenant (NYC Commission on Human Rights).",
+        "NYC tenant questions can go to 311, the Tenant Helpline (NYC)."
+      ],
+      "key_facts_ka": [
+        "FTC-ის განმარტება თანამსესხებლობაზე (cosigning) სესხს ეხება და არა ქირას. ქირის გარანტია ცალკე დოკუმენტია და მისი პირობები შეიძლება განსხვავდებოდეს (FTC).",
+        "FTC-ის მიხედვით, სესხის თანამსესხებელს შეიძლება მთელი ვალი, დაგვიანების ჯარიმა და ამოღების ხარჯი დაეკისროს, ვალი კი მის საკრედიტო ისტორიაში აისახოს (FTC).",
+        "ნიუ-იორკში მოქირავნეს, რომლის ქირის წილსაც ვაუჩერი შემოსავლის მიხედვით ადგენს, გარანტორის ან თანამოქირავნის მოყვანას ვერ მოსთხოვენ (NYC Commission on Human Rights).",
+        "ქირასთან დაკავშირებული კითხვებით ნიუ-იორკში 311-ს (Tenant Helpline) მიმართავენ (NYC)."
+      ],
+      "keywords_en": ["cosigner", "co-signer", "guarantor", "lease guaranty", "co-tenant", "credit score", "no credit", "Section 8", "voucher", "renting"],
+      "keywords_ka": ["გარანტორი", "კოსაინერი", "გარანტია", "თანამოქირავნე", "კრედიტ სქორი", "ვაუჩერი"],
+      "url": "https://kartvelians.com/ny/newcomers/cosigner",
+      "risk": "normal",
+      "updated": "2026-10-09",
+      "status": "published"
+    },
+    {
+      "slug": "subway",
+      "title_ka": "მეტრო და ავტობუსი ნიუ-იორკში: როგორ გადაიხადო, სად იყიდო OMNY ბარათი და რა ღირს",
+      "title_en": "Subway and bus in New York",
+      "summary_en": "How New York City subway and bus fares work with OMNY tap-to-pay: prices, the weekly fare cap, free transfers, where to buy and reload an OMNY card, reduced fares and the end of the MetroCard.",
+      "summary_ka": "როგორ მუშაობს ნიუ-იორკის მეტროსა და ავტობუსის საფასური OMNY-ით შეხებით გადახდისას: ფასები, კვირის ლიმიტი, უფასო გადაჯდომა, სად იყიდება და ივსება OMNY ბარათი, შეღავათიანი ტარიფები და MetroCard-ის გაუქმება.",
+      "key_facts_en": [
+        "Subway and local bus fare is $3. Express bus fare is $7.25 (MTA).",
+        "Tapping with the same card or device caps fares at $35 in 7 days on subway and local bus, counted from the first tap (MTA).",
+        "One free transfer is allowed within 2 hours. A plastic card and the same card in a phone wallet count as different payment methods (MTA).",
+        "MetroCard sales and refills ended on January 1, 2026 (MTA).",
+        "Reduced fare for people 65 and over and people with disabilities is $1.50 per ride. Fair Fares NYC gives eligible low-income residents 50% off (MTA, NYC)."
+      ],
+      "key_facts_ka": [
+        "მეტროსა და ადგილობრივ ავტობუსში მგზავრობა 3 დოლარი ღირს, ექსპრეს ავტობუსში 7,25 დოლარი (MTA).",
+        "თუ ერთი და იგივე ბარათით ან მოწყობილობით იხდი, მეტროსა და ადგილობრივ ავტობუსზე 7 დღეში მაქსიმუმ 35 დოლარი ჩამოგეჭრება. 7 დღე პირველი შეხებიდან ითვლება (MTA).",
+        "2 საათის განმავლობაში ერთი გადაჯდომა უფასოა. პლასტიკური ბარათი და იგივე ბარათი ტელეფონში ორ სხვადასხვა გადახდის საშუალებად ითვლება (MTA).",
+        "MetroCard-ის გაყიდვა და შევსება 2026 წლის 1 იანვარს შეწყდა (MTA).",
+        "65 წელს გადაცილებულთა და შეზღუდული შესაძლებლობის მქონე ადამიანებისთვის მგზავრობა 1,50 დოლარია. Fair Fares NYC დაბალი შემოსავლის მქონე მცხოვრებლებს 50%-იან ფასდაკლებას აძლევს (MTA, NYC)."
+      ],
+      "keywords_en": ["subway", "metro", "bus", "fare", "OMNY", "MetroCard", "fare cap", "transfer", "MTA", "express bus", "Fair Fares", "reduced fare"],
+      "keywords_ka": ["მეტრო", "ავტობუსი", "OMNY", "ბარათი", "მგზავრობა", "საფასური", "გადაჯდომა", "მეტროქარდი"],
+      "url": "https://kartvelians.com/ny/newcomers/subway",
+      "risk": "normal",
+      "updated": "2026-10-09",
+      "status": "published"
+    },
+    {
+      "slug": "driver-scams",
+      "title_ka": "Uber-ისა და Lyft-ის მძღოლებისთვის: როგორ ამოიცნო თაღლითობა და არ დაკარგო ფული",
+      "title_en": "Scams aimed at Uber and Lyft drivers",
+      "summary_en": "Scams aimed at Uber and Lyft drivers, mainly fake support calls and texts that try to steal verification codes, logins and earnings. The guide lists common patterns, what the companies and federal agencies say, how real support differs from fake, and where scams are reported.",
+      "summary_ka": "თაღლითური სქემები Uber-ისა და Lyft-ის მძღოლების წინააღმდეგ, ძირითადად ყალბი „მხარდაჭერის“ ზარები და SMS-ები, რომლითაც დადასტურების კოდს, ანგარიშსა და შემოსავალს იპარავენ. სტატია აღწერს გავრცელებულ სქემებს, კომპანიებისა და ფედერალური უწყებების პოზიციას, ნამდვილი მხარდაჭერის ამოცნობას და იმას, სად შეიძლება თაღლითობის შეტყობინება.",
+      "key_facts_en": [
+        "Uber says it never calls, texts or emails to ask for a password, verification code or bank details (Uber).",
+        "The FTC says anyone who asks for an account verification code is a scammer (FTC).",
+        "Caller ID can be faked on purpose, which is called spoofing (FCC).",
+        "Sharing or renting a driver account is against Uber and Lyft rules and can lead to deactivation (Uber, Lyft).",
+        "Fraud is reported at ReportFraud.ftc.gov and identity theft at IdentityTheft.gov. Spam texts can be forwarded to 7726 (FTC)."
+      ],
+      "key_facts_ka": [
+        "Uber-ის თქმით, ის არასოდეს რეკავს, წერს ან აგზავნის წერილს პაროლის, დადასტურების კოდის ან საბანკო მონაცემების მოსათხოვად (Uber).",
+        "FTC-ის თქმით, ვინც ანგარიშის დადასტურების კოდს ითხოვს, თაღლითია (FTC).",
+        "ზარის ნომერი შეიძლება განზრახ გაყალბდეს. ამას spoofing ჰქვია (FCC).",
+        "მძღოლის ანგარიშის გაზიარება ან გაქირავება Uber-ისა და Lyft-ის წესებით აკრძალულია და შეიძლება ანგარიშის დაბლოკვით დასრულდეს (Uber, Lyft).",
+        "თაღლითობა ეცნობება ReportFraud.ftc.gov-ზე, პირადი მონაცემების ქურდობა IdentityTheft.gov-ზე. სპამ SMS შეიძლება 7726-ზე გადაიგზავნოს (FTC)."
+      ],
+      "keywords_en": ["Uber", "Lyft", "rideshare", "driver", "driver scam", "verification code", "phishing", "fake support", "spoofing", "deactivation", "account sharing"],
+      "keywords_ka": ["უბერი", "ლიფტი", "მძღოლი", "თაღლითობა", "კოდი", "დადასტურების კოდი", "ფიშინგი", "მხარდაჭერა"],
+      "url": "https://kartvelians.com/ny/newcomers/driver-scams",
+      "risk": "normal",
+      "updated": "2026-10-10",
+      "status": "published"
+    },
+    {
+      "slug": "salvage-title",
+      "title_ka": "Salvage title მანქანა: რას ნიშნავს, რა რისკი ახლავს და ღირს თუ არა ყიდვა",
+      "title_en": "Salvage-title cars",
+      "summary_en": "What salvage and rebuilt salvage titles mean in New York State, what the DMV salvage inspection does and does not check, the risks of buying such a car, and the checks available before purchase, such as VIN history and recall lookups.",
+      "summary_ka": "რას ნიშნავს salvage და Rebuilt Salvage საკუთრების მოწმობა ნიუ-იორკის შტატში, რას ამოწმებს და რას არა DMV-ის შემოწმება, რა რისკი ახლავს ასეთი მანქანის ყიდვას და რისი გადამოწმებაა შესაძლებელი ყიდვამდე, მაგალითად VIN-ით ისტორიისა და გამოხმობების (recall) ძებნა.",
+      "key_facts_en": [
+        "In New York a car is salvage in several cases, including when repair costs exceed 75% of its pre-damage retail value (NY DMV).",
+        "A Rebuilt Salvage brand stays on the title for the life of the vehicle (NY DMV).",
+        "The DMV salvage inspection checks only for stolen vehicles or parts. It is not a safety or emissions inspection (NY DMV).",
+        "New York dealers must disclose a branded title in writing. The DMV takes no complaints about private sales (NY DMV).",
+        "NICB VINCheck and the NHTSA recall lookup are free. NMVTIS reports are paid, and NMVTIS says a search can miss salvage history (NICB, NHTSA, NMVTIS)."
+      ],
+      "key_facts_ka": [
+        "ნიუ-იორკში მანქანა salvage ხდება რამდენიმე შემთხვევაში, მათ შორის მაშინ, როცა შეკეთების ხარჯი დაზიანებამდელი საცალო ფასის 75%-ს აღემატება (NY DMV).",
+        "Rebuilt Salvage აღნიშვნა საკუთრების მოწმობაზე მანქანის მთელი სიცოცხლის განმავლობაში რჩება (NY DMV).",
+        "DMV-ის salvage შემოწმება მხოლოდ იმას ადგენს, ხომ არ არის მანქანა ან ნაწილები მოპარული. ეს არ არის უსაფრთხოების ან გამონაბოლქვის შემოწმება (NY DMV).",
+        "ნიუ-იორკში დილერი ვალდებულია, ასეთი აღნიშვნის შესახებ წერილობით აცნობოს მყიდველს. კერძო გაყიდვაზე DMV საჩივარს არ იღებს (NY DMV).",
+        "NICB VINCheck და NHTSA-ს გამოხმობების ძებნა უფასოა. NMVTIS-ის ანგარიში ფასიანია და, თავად NMVTIS-ის თქმით, ძებნამ შეიძლება salvage ისტორია ვერ აჩვენოს (NICB, NHTSA, NMVTIS)."
+      ],
+      "keywords_en": ["salvage title", "rebuilt salvage", "salvage car", "used car", "total loss", "flood car", "VIN check", "car history", "DMV inspection", "buying a car"],
+      "keywords_ka": ["salvage", "მანქანა", "მანქანის ყიდვა", "ნახმარი მანქანა", "VIN", "საკუთრების მოწმობა", "ტაიტლი", "წყალში ნამყოფი"],
+      "url": "https://kartvelians.com/ny/newcomers/salvage-title",
+      "risk": "normal",
+      "updated": "2026-10-11",
+      "status": "published"
+    },
+    {
+      "slug": "housekeeper-pay-taxes",
+      "title_ka": "Zelle-ით მიღებული ხელფასი იბეგრება? ჰაუსკიპერის ანაზღაურება და გადასახადები",
+      "title_en": "Is Zelle pay taxable? Housekeepers and taxes",
+      "summary_en": "Whether pay that a housekeeper, cleaner or nanny receives through Zelle, by check or in cash is taxable, and what the IRS and New York State say about the worker's and the household's duties. It also covers 1099-K reporting, ITINs and free tax help.",
+      "summary_ka": "იბეგრება თუ არა ჰაუსკიპერის, დამლაგებლის ან ძიძის ანაზღაურება, რომელსაც Zelle-ით, ჩეკით ან ნაღდი ფულით იღებენ, და რას ამბობენ IRS და ნიუ-იორკის შტატი მუშაკისა და ოჯახის ვალდებულებებზე. სტატია ასევე ეხება 1099-K ფორმას, ITIN-ს და უფასო საგადასახადო დახმარებას.",
+      "key_facts_en": [
+        "How pay is sent does not change whether it is taxable. Income is taxable unless the law excludes it, even when no 1099-K is issued (IRS).",
+        "The IRS treats a housekeeper or nanny as a household employee when the family controls what work is done and how (IRS Publication 926).",
+        "For 2026, Social Security and Medicare taxes apply when a family pays one household employee $3,000 or more (IRS).",
+        "Self-employment tax applies, and a return must be filed, when net self-employment earnings are $400 or more (IRS).",
+        "An ITIN does not authorize work and says nothing about immigration status (IRS)."
+      ],
+      "key_facts_ka": [
+        "გადახდის ხერხი არ ცვლის, იბეგრება თუ არა თანხა. შემოსავალი იბეგრება, თუ კანონი მას არ ათავისუფლებს, მაშინაც კი, როცა 1099-K ფორმა არ გაიცემა (IRS).",
+        "IRS ჰაუსკიპერს ან ძიძას ოჯახში დასაქმებულად (household employee) მიიჩნევს, როცა ოჯახი წყვეტს, რა სამუშაო შესრულდება და როგორ (IRS Publication 926).",
+        "2026 წელს სოციალური დაზღვევისა და Medicare-ის გადასახადი მოქმედებს, თუ ოჯახი ერთ დასაქმებულს 3000 დოლარს ან მეტს უხდის (IRS).",
+        "თვითდასაქმების გადასახადი და დეკლარაციის შევსების ვალდებულება ჩნდება, როცა თვითდასაქმებით მიღებული წმინდა შემოსავალი 400 დოლარს ან მეტს შეადგენს (IRS).",
+        "ITIN საგადასახადო ნომერია: ის არც მუშაობის ნებართვაა და არც იმიგრაციული სტატუსის დასტური (IRS)."
+      ],
+      "keywords_en": ["Zelle taxes", "Zelle", "housekeeper", "cleaner", "nanny", "household employee", "nanny tax", "Schedule H", "1099-K", "self-employment tax", "ITIN", "taxes", "IRS"],
+      "keywords_ka": ["ჰაუსკიპერი", "დამლაგებელი", "ძიძა", "გადასახადი", "გადასახადები", "Zelle", "დეკლარაცია", "ხელფასი", "თვითდასაქმებული"],
+      "url": "https://kartvelians.com/ny/newcomers/housekeeper-pay-taxes",
+      "risk": "high",
+      "disclaimer": {
+        "en": "General information, not legal or tax advice.",
+        "ka": "ეს ზოგადი ინფორმაციაა და არა იურიდიული ან საგადასახადო რჩევა."
+      },
+      "updated": "2026-10-14",
+      "status": "published"
+    },
+    {
+      "slug": "id-license",
+      "title_ka": "ქართული მართვის მოწმობა ამერიკაში: შეგიძლია თუ არა ტარება და გამოგადგება თუ არა ID-დ",
+      "title_en": "A Georgian driver's license in the US",
+      "summary_en": "Whether a Georgian driver's license can be used to drive in New York, what it takes to get a New York license, and whether the DMV and banks accept a Georgian license as ID.",
+      "summary_ka": "შეიძლება თუ არა ნიუ-იორკში ქართული მართვის მოწმობით ტარება, რა სჭირდება ნიუ-იორკის მოწმობის აღებას და იღებენ თუ არა DMV და ბანკები ქართულ მოწმობას პირადობის დამადასტურებელ დოკუმენტად.",
+      "key_facts_en": [
+        "A non-resident may drive in New York on a valid foreign license. A new resident must get a New York license within 30 days (NY DMV).",
+        "A foreign license gives no exemption: the written test, the 5-hour pre-licensing course and the road test are all required (NY DMV).",
+        "A license not in English needs an International Driving Permit or an officially certified translation at the road test (NY DMV).",
+        "US citizenship is not required for a New York license, permit or ID card (NY DMV).",
+        "For DMV proof of identity, a foreign passport counts 4 points, and a foreign photo license counts 4 points if valid or expired no more than 2 years (NY DMV Form ID-44)."
+      ],
+      "key_facts_ka": [
+        "არარეზიდენტს ნიუ-იორკში მოქმედი უცხოური მოწმობით ტარება შეუძლია. ახალმა რეზიდენტმა ნიუ-იორკის მოწმობა 30 დღეში უნდა აიღოს (NY DMV).",
+        "უცხოური მოწმობა არც ერთი ეტაპისგან არ ათავისუფლებს: საჭიროა წერითი გამოცდა, 5-საათიანი მოსამზადებელი კურსი და საგზაო გამოცდა (NY DMV).",
+        "არაინგლისურენოვან მოწმობას საგზაო გამოცდაზე საერთაშორისო მართვის მოწმობა (IDP) ან ოფიციალურად დამოწმებული თარგმანი სჭირდება (NY DMV).",
+        "მოწმობის, სასწავლო ნებართვისა და ID ბარათის მისაღებად ნიუ-იორკის DMV აშშ-ის მოქალაქეობას არ ითხოვს (NY DMV).",
+        "DMV-ში პირადობის დასადასტურებლად უცხოური პასპორტი 4 ქულად ითვლება, უცხოური მართვის მოწმობა ფოტოთი კი 4 ქულად, თუ მოქმედია ან ვადა 2 წელზე მეტი ხნის წინ არ გასვლია (NY DMV, ფორმა ID-44)."
+      ],
+      "keywords_en": ["driver's license", "drivers license", "foreign license", "Georgian license", "DMV", "road test", "International Driving Permit", "IDP", "ID", "bank account", "learner permit"],
+      "keywords_ka": ["მართვის მოწმობა", "პრავა", "ქართული მოწმობა", "DMV", "საგზაო გამოცდა", "წერითი გამოცდა", "საერთაშორისო მოწმობა", "პირადობა"],
+      "url": "https://kartvelians.com/ny/newcomers/id-license",
+      "risk": "normal",
+      "updated": "2026-10-01",
+      "status": "published"
+    },
+    {
+      "slug": "loan-calls",
+      "title_ka": "მირეკავენ და მთავაზობენ სესხს: როგორ გავარკვიო, რეალურია თუ არა",
+      "title_en": "Calls offering loans: real or a scam",
+      "summary_en": "How real loan offers differ from scams that arrive by robocall, text, email or mail: warning signs, how a lender's license is checked in New York, and where scams are reported, including when money or personal data was already given.",
+      "summary_ka": "როგორ გაირჩევა ნამდვილი სესხის შეთავაზება თაღლითობისგან, როცა ის რობოზარით, SMS-ით, ელფოსტით ან წერილით მოდის: საგანგაშო ნიშნები, როგორ მოწმდება გამსესხებლის ლიცენზია ნიუ-იორკში და სად შეიძლება შეტყობინება, მათ შორის მაშინ, თუ ფული ან პირადი მონაცემები უკვე გადაცემულია.",
+      "key_facts_en": [
+        "Legitimate lenders do not guarantee a loan before an application. Promising a loan by phone and asking for an upfront fee is illegal (FTC).",
+        "Robocalls that sell something without written consent are illegal (FTC).",
+        "A preapproved or prescreened offer means the lender bought a list from credit bureaus. An application is still required (FTC).",
+        "Lender and broker licenses in New York can be checked with the NY Department of Financial Services (NY DFS).",
+        "Scams are reported at ReportFraud.ftc.gov, and spam texts can be forwarded to 7726 (FTC)."
+      ],
+      "key_facts_ka": [
+        "კანონიერი გამსესხებელი სესხს განაცხადამდე არ გპირდება. ტელეფონით სესხის დაპირება და წინასწარი საფასურის მოთხოვნა უკანონოა (FTC).",
+        "რობოზარი, რომელიც წერილობითი თანხმობის გარეშე რამეს გყიდის, უკანონოა (FTC).",
+        "„წინასწარ დამტკიცებული“ (preapproved) შეთავაზება ნიშნავს, რომ გამსესხებელმა სია საკრედიტო ბიუროებისგან იყიდა. განაცხადი მაინც საჭიროა (FTC).",
+        "ნიუ-იორკში გამსესხებლისა და ბროკერის ლიცენზია ფინანსური მომსახურების დეპარტამენტში მოწმდება (NY DFS).",
+        "თაღლითობა ეცნობება ReportFraud.ftc.gov-ზე, სპამ SMS კი შეიძლება 7726-ზე გადაიგზავნოს (FTC)."
+      ],
+      "keywords_en": ["loan", "loan scam", "loan offer", "robocall", "advance fee", "preapproved", "fake check", "lender license", "phishing", "gift card scam"],
+      "keywords_ka": ["სესხი", "სესხის შეთავაზება", "თაღლითობა", "რობოზარი", "გამსესხებელი", "ყალბი ჩეკი", "ფიშინგი"],
+      "url": "https://kartvelians.com/ny/newcomers/loan-calls",
+      "risk": "normal",
+      "updated": "2026-10-09",
+      "status": "published"
+    },
+    {
+      "slug": "money-exchange",
+      "title_ka": "ფულის გაცვლა ხელიდან ხელში ამერიკასა და საქართველოს შორის: რა რისკი ახლავს და რას ამბობს კანონი",
+      "title_en": "Hand-to-hand money exchange between the US and Georgia",
+      "summary_en": "The risks of informal hand-to-hand money exchange between the US and Georgia, and the US federal, New York and Georgian rules that may apply. It also covers money-mule fraud and the protections that licensed transfer services have and informal swaps lack.",
+      "summary_ka": "ამერიკასა და საქართველოს შორის ხელიდან ხელში ფულის გაცვლის რისკები და აშშ-ის ფედერალური, ნიუ-იორკისა და საქართველოს წესები, რომლებიც შეიძლება ამ შემთხვევაზე გავრცელდეს. სტატია ასევე ეხება „ფულის კურიერად“ (money mule) გამოყენების საფრთხეს და იმ დაცვას, რომელიც ლიცენზირებულ გადარიცხვებს აქვს, არაფორმალურ გაცვლას კი არა.",
+      "key_facts_en": [
+        "Running an unlicensed money transmitting business is a federal crime (18 U.S.C. § 1960).",
+        "Under New York Banking Law § 650, unlicensed money transmission is a crime. Licenses are issued by NY DFS (New York State).",
+        "Splitting cash amounts to avoid a bank's report on transactions over $10,000 is a separate federal crime, called structuring (31 U.S.C. § 5324).",
+        "Licensed remittance providers must disclose the rate, fees and amount received, and errors can be disputed within 180 days (CFPB).",
+        "In Georgia, payment services may be provided only by registered providers and banks, and the National Bank of Georgia has warned that unregistered exchange can bring liability (National Bank of Georgia)."
+      ],
+      "key_facts_ka": [
+        "ლიცენზიის გარეშე ფულის გადარიცხვის ბიზნესი აშშ-ში ფედერალური დანაშაულია (18 U.S.C. § 1960).",
+        "ნიუ-იორკის საბანკო კანონის § 650-ის მიხედვით, ლიცენზიის გარეშე ფულის გადარიცხვა დანაშაულია. ლიცენზიას NY DFS გასცემს (ნიუ-იორკის შტატი).",
+        "ნაღდი თანხის დაყოფა იმისთვის, რომ ბანკმა 10 000 დოლარზე მეტ ოპერაციაზე ანგარიში არ წარადგინოს, ცალკე ფედერალური დანაშაულია და structuring ჰქვია (31 U.S.C. § 5324).",
+        "ლიცენზირებული გადარიცხვის კომპანია ვალდებულია, აჩვენოს კურსი, საკომისიო და მისაღები თანხა. შეცდომის გასაჩივრება 180 დღის განმავლობაშია შესაძლებელი (CFPB).",
+        "საქართველოში საგადახდო მომსახურებას მხოლოდ რეგისტრირებული პროვაიდერები და ბანკები უწევენ. ეროვნულმა ბანკმა გააფრთხილა, რომ დაურეგისტრირებელმა გაცვლამ შეიძლება პასუხისმგებლობა გამოიწვიოს (საქართველოს ეროვნული ბანკი)."
+      ],
+      "keywords_en": ["money exchange", "send money to Georgia", "money transfer", "remittance", "cash exchange", "unlicensed money transmitter", "money mule", "structuring", "FBAR", "exchange rate"],
+      "keywords_ka": ["ფულის გაცვლა", "ფულის გაგზავნა", "გადარიცხვა", "ფულადი გზავნილი", "ნაღდი ფული", "ვალუტა", "კურსი", "ეროვნული ბანკი"],
+      "url": "https://kartvelians.com/ny/newcomers/money-exchange",
+      "risk": "high",
+      "disclaimer": {
+        "en": "General information, not legal or tax advice.",
+        "ka": "ეს ზოგადი ინფორმაციაა და არა იურიდიული ან საგადასახადო რჩევა."
+      },
+      "updated": "2026-10-05",
+      "status": "published"
+    },
+    {
+      "slug": "remote-job",
+      "title_ka": "დისტანციური სამსახური ვერ იპოვე? რა ხდება სინამდვილეში და რა შეგიძლია შეცვალო",
+      "title_en": "Can't find a remote job?",
+      "summary_en": "Why remote job applications in the US often get no reply: how few postings are fully remote, how many people apply to each, and why employers screen for hiring risk. It also covers resumes and search methods, the legal and tax reasons companies hire locally, and job scams.",
+      "summary_ka": "რატომ რჩება ხშირად უპასუხოდ აშშ-ში დისტანციურ სამსახურზე გაგზავნილი განაცხადი: რამდენად ცოტაა სრულად დისტანციური ვაკანსია, რამდენი ადამიანი აგზავნის განაცხადს და რატომ აფასებენ დამსაქმებლები დაქირავების რისკს. სტატია ასევე ეხება რეზიუმეს, ძებნის მეთოდს, ადგილობრივად დაქირავების მიზეზებს და თაღლითობას.",
+      "key_facts_en": [
+        "At the end of August 2026, about 8% of US job postings mentioned remote or hybrid work (Indeed Hiring Lab).",
+        "In September 2025, fully remote roles were about 8% of US paid postings on LinkedIn but drew 35% of applications (LinkedIn data, via Business Insider).",
+        "Under ITAR and EAR export rules, giving a foreign person access to certain technical data can count as an export, even inside the US (Princeton ORPA).",
+        "The FTC lists an employer that asks for money, sends a check and asks for part back, or requires buying equipment as signs of a job scam (FTC)."
+      ],
+      "key_facts_ka": [
+        "2026 წლის აგვისტოს ბოლოს აშშ-ის ვაკანსიების დაახლოებით 8% დისტანციურ ან ჰიბრიდულ მუშაობას ახსენებდა (Indeed Hiring Lab).",
+        "2025 წლის სექტემბერში LinkedIn-ზე სრულად დისტანციური ვაკანსიები ფასიანი განცხადებების დაახლოებით 8% იყო, განაცხადების 35% კი მათზე მოდიოდა (LinkedIn-ის მონაცემები, Business Insider).",
+        "ექსპორტის კონტროლის წესებით (ITAR, EAR), უცხოელისთვის გარკვეულ ტექნიკურ მონაცემებზე წვდომის მიცემა შეიძლება ექსპორტად ჩაითვალოს, აშშ-ის შიგნითაც (Princeton ORPA).",
+        "FTC თაღლითობის ნიშნად მიიჩნევს, როცა „დამსაქმებელი“ ფულს ითხოვს, ჩეკს გიგზავნის და ნაწილის დაბრუნებას გთხოვს ან აღჭურვილობის ყიდვას გავალდებულებს (FTC)."
+      ],
+      "keywords_en": ["remote job", "work from home", "remote work", "job search", "resume", "hybrid job", "job application", "no response", "job scam", "work authorization"],
+      "keywords_ka": ["დისტანციური სამსახური", "დისტანციური", "სამსახური", "ვაკანსია", "რეზიუმე", "სამუშაო", "ჰიბრიდული"],
+      "url": "https://kartvelians.com/ny/newcomers/remote-job",
+      "risk": "normal",
+      "updated": "2026-10-10",
+      "status": "published"
+    },
+    {
+      "slug": "glossary",
+      "title_ka": "სიტყვარი: რას ნიშნავს ინგლისური სიტყვები, რომლებსაც ამერიკაში გაიგონებ",
+      "title_en": "Glossary of English words heard in America",
+      "summary_en": "About 180 English words that newcomers hear from landlords, banks, the DMV and other agencies, grouped into 10 topics such as housing, banking, work and taxes, driving, transit and scams. Each entry gives the word, how it sounds written in Georgian letters, and a plain Georgian explanation.",
+      "summary_ka": "დაახლოებით 180 ინგლისური სიტყვა, რომელსაც ახლად ჩამოსული ადამიანი მესაკუთრისგან, ბანკში, DMV-ში და სხვა უწყებებში ისმენს, დალაგებული 10 თემად: საცხოვრებელი, ბანკი, სამსახური და გადასახადები, მართვის მოწმობა, ტრანსპორტი, თაღლითობა და სხვა. თითო სიტყვას ახლავს ქართული ასოებით ჩაწერილი წარმოთქმა და მარტივი განმარტება.",
+      "key_facts_en": [
+        "Sections: housing and rent, money and banking, work and taxes, sending money, license and ID, subway and tolls, buying a car, utilities, city services, and scams.",
+        "Entries are plain-language explanations, not legal definitions.",
+        "Entries link to the full kartvelians.com guide on the same topic where one exists."
+      ],
+      "key_facts_ka": [
+        "თემები: საცხოვრებელი და ქირა, ფული და ბანკი, სამსახური და გადასახადები, ფულის გაგზავნა, მართვის მოწმობა და ID, მეტრო და გზის საფასური, მანქანის ყიდვა, კომუნალური მომსახურება, ქალაქის სერვისები და თაღლითობა.",
+        "განმარტებები მარტივი ენითაა დაწერილი და იურიდიული განმარტებები არ არის.",
+        "სადაც შესაბამისი სტატია არსებობს, სიტყვას kartvelians.com-ის სრულ სტატიაზე ბმული ახლავს."
+      ],
+      "keywords_en": ["glossary", "English words", "vocabulary", "dictionary", "what does it mean", "meaning", "terms", "pronunciation"],
+      "keywords_ka": ["სიტყვარი", "ინგლისური სიტყვები", "ლექსიკონი", "რას ნიშნავს", "მნიშვნელობა", "ტერმინი"],
+      "url": "https://kartvelians.com/ny/newcomers/glossary",
+      "risk": "normal",
+      "updated": "2026-10-17",
+      "status": "published"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kartvelians": {
+      "type": "http",
+      "url": "https://kartvelians.com/mcp"
+    }
+  }
+}
