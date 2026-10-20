@@ -7,22 +7,24 @@
       "slug": "ezpass",
       "title_ka": "E-ZPass ნიუ-იორკში: სად იყიდო ონლაინის გარეშე და როგორ ჩართო",
       "title_en": "E-ZPass in New York",
-      "summary_en": "How to get an E-ZPass tag in New York without ordering online: buying the On-the-Go tag in a store, registering it, and funding the account, including with cash. It also covers what Tolls by Mail costs, the Manhattan congestion zone, rented cars and toll disputes.",
-      "summary_ka": "როგორ შეიძლება E-ZPass-ის შეძენა ნიუ-იორკში ონლაინ შეკვეთის გარეშე: On-the-Go თეგის ყიდვა მაღაზიაში, მისი რეგისტრაცია და ანგარიშის შევსება, მათ შორის ნაღდი ფულით. სტატია ასევე ეხება Tolls by Mail-ის ღირებულებას, მანჰეტენის გადატვირთულობის ზონას, ნაქირავებ მანქანას და საფასურის გასაჩივრებას.",
+      "summary_en": "How to get an E-ZPass tag in New York without ordering online: buying the On-the-Go tag in a store, with a list of Brooklyn locations, then registering it and funding the account, including with cash. It also covers Tolls by Mail costs, the Manhattan congestion zone, rented cars and toll disputes.",
+      "summary_ka": "როგორ შეიძლება E-ZPass-ის შეძენა ნიუ-იორკში ონლაინ შეკვეთის გარეშე: On-the-Go თეგის ყიდვა მაღაზიაში (სტატიაში ბრუკლინის მაღაზიების სიაა), მისი რეგისტრაცია და ანგარიშის შევსება, მათ შორის ნაღდი ფულით. სტატია ასევე ეხება Tolls by Mail-ის ღირებულებას, მანჰეტენის გადატვირთულობის ზონას, ნაქირავებ მანქანას და საფასურის გასაჩივრებას.",
       "key_facts_en": [
+        "The guide lists Brooklyn stores from the official E-ZPass On-the-Go retailer list (MTA data, last updated July 2024). The site has not checked the stores, and the list is only on the guide page.",
         "The On-the-Go retail tag costs $25 and must be registered online or by phone before use (NYS Thruway Authority).",
         "MTA bridges and tunnels are cashless. Without a tag, the bill is mailed to the registered owner, and the E-ZPass rate is at least 25% lower (MTA).",
         "An unpaid Tolls by Mail bill adds a $5 fee after 30 days and up to $50 per crossing after 60 days, and the registration can be suspended (MTA).",
         "An account can be funded by auto-replenish, by Pay Per Trip from a checking account, or with cash at participating stores (MTA)."
       ],
       "key_facts_ka": [
+        "სტატიაში ბრუკლინის მაღაზიების სიაა, აღებული On-the-Go თეგის გამყიდველების ოფიციალური სიიდან (MTA-ის მონაცემები, ბოლოს განახლდა 2024 წლის ივლისში). საიტს ეს მაღაზიები არ გადაუმოწმებია. სია მხოლოდ სტატიის გვერდზეა.",
         "On-the-Go თეგი მაღაზიაში 25 დოლარი ღირს და გამოყენებამდე ონლაინ ან ტელეფონით უნდა დარეგისტრირდეს (NYS Thruway Authority).",
         "MTA-ის ხიდებსა და გვირაბებზე ნაღდი ფული აღარ მიიღება. თეგის გარეშე ანგარიში ფოსტით მიდის მანქანის რეგისტრირებულ მფლობელთან, E-ZPass-ის ტარიფი კი სულ მცირე 25%-ით იაფია (MTA).",
         "გადაუხდელ Tolls by Mail ანგარიშს 30 დღის შემდეგ 5 დოლარი ემატება, 60 დღის შემდეგ კი თითო გავლაზე 50 დოლარამდე. მანქანის რეგისტრაციაც შეიძლება შეჩერდეს (MTA).",
         "ანგარიში ივსება ავტომატურად, ჩეკინგ ანგარიშიდან ყოველი გავლის შემდეგ ან ნაღდი ფულით ზოგიერთ მაღაზიაში (MTA)."
       ],
-      "keywords_en": ["E-ZPass", "tolls", "toll", "NYC tolls", "Tolls by Mail", "toll bill", "congestion pricing", "On-the-Go", "bridge toll", "tunnel toll", "cashless tolling"],
-      "keywords_ka": ["იზი-ფასი", "თოლი", "თეგი", "საფასური", "ხიდი", "გვირაბი", "გზის საფასური"],
+      "keywords_en": ["E-ZPass", "EZ Pass", "EZPass", "EZ-Pass", "tolls", "toll", "NYC tolls", "Tolls by Mail", "toll bill", "congestion pricing", "On-the-Go", "bridge toll", "tunnel toll", "cashless tolling"],
+      "keywords_ka": ["იზი-ფასი", "იზი ფასი", "იზი პასი", "იზი-პასი", "იზიპასი", "იზიფასი", "თოლი", "თეგი", "საფასური", "ხიდი", "გვირაბი", "გზის საფასური"],
       "url": "https://kartvelians.com/ny/newcomers/ezpass",
       "risk": "normal",
       "updated": "2026-10-09",

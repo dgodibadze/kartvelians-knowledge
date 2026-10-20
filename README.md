@@ -33,9 +33,9 @@ The skill alone is at `plugin/skills/kartvelians-knowledge/SKILL.md`.
 
 | Tool | Returns |
 |---|---|
-| `search_topics(query, lang?)` | Up to 5 matching guides: slug, title, summary, risk, url |
-| `get_guide(slug, lang?)` | Title, summary, key facts, risk, disclaimer if high risk, updated date, url |
-| `list_topics(status?)` | Published guides, and planned topics marked "coming soon" |
+| `search_guides_for_georgians_in_us(query, lang?)` | Up to 5 matching guides: slug, title, summary, risk, url |
+| `get_guide_for_georgians_in_us(slug, lang?)` | Title, summary, key facts, risk, disclaimer if high risk, updated date, url |
+| `list_guides_for_georgians_in_us(status?)` | Published guides, and planned topics marked "coming soon" |
 
 Every reply includes `source_url` and an attribution line. `lang` is `en` or `ka`. It defaults to
 the language of the query.

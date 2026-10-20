@@ -41,15 +41,17 @@ const init = await rpc("initialize", {
 	capabilities: {},
 	clientInfo: { name: "test-search", version: "0" },
 });
-expect("initialize returns instructions", (init.instructions ?? "").includes("search_topics"));
+expect("initialize returns instructions", (init.instructions ?? "").includes("search_guides_for_georgians_in_us"));
 
 const tools = await rpc("tools/list", {});
 const names = tools.tools.map((t) => t.name).sort().join(",");
-expect("three read-only tools", names === "get_guide,list_topics,search_topics", names);
+expect("three read-only tools", names === "get_guide_for_georgians_in_us,list_guides_for_georgians_in_us,search_guides_for_georgians_in_us", names);
 expect("all tools marked read-only", tools.tools.every((t) => t.annotations?.readOnlyHint === true));
 
 const cases = [
 	["How do I pay tolls in New York?", "ezpass", "en"],
+	["სად ვიყიდო იზი პასი ბრუკლინში?", "ezpass", "ka"],
+	["where can I buy an EZ Pass in Brooklyn", "ezpass", "en"],
 	["როგორ ვიქირაო ბინა ნიუ-იორკში?", "rent", "ka"],
 	["Is Zelle pay taxable for a housekeeper?", "housekeeper-pay-taxes", "en"],
 	["OMNY weekly fare cap", "subway", "en"],
@@ -66,7 +68,7 @@ const cases = [
 	["what does security deposit mean in English words", "glossary", "en"],
 ];
 for (const [q, slug, lang] of cases) {
-	const r = await call("search_topics", { query: q });
+	const r = await call("search_guides_for_georgians_in_us", { query: q });
 	const top = r.results[0]?.slug;
 	expect(`"${q}" -> ${slug}`, top === slug, `got ${r.results.map((x) => x.slug).join(",") || "none"}`);
 	if (lang === "ka") expect(`"${q}" answered in Georgian`, /[Ⴀ-ჿ]/.test(r.results[0]?.summary ?? ""));
@@ -74,31 +76,33 @@ for (const [q, slug, lang] of cases) {
 }
 
 for (const q of ["Recommend a Georgian doctor", "best Georgian restaurant in Brooklyn", "ქართველი სტომატოლოგი მჭირდება"]) {
-	const r = await call("search_topics", { query: q });
+	const r = await call("search_guides_for_georgians_in_us", { query: q });
 	expect(`"${q}" -> no match`, r.results.length === 0, `got ${r.results.map((x) => x.slug).join(",")}`);
 	expect(`"${q}" -> says no guide`, /no kartvelians\.com guide|სახელმძღვანელო არ არის/i.test(r.note ?? ""));
 	commonFields(q, r);
 }
 
-const generic = await call("search_topics", { query: "Georgians in New York" });
-expect("generic query -> points to list_topics", generic.results.length === 0 && /list_topics/.test(generic.note ?? ""));
+const generic = await call("search_guides_for_georgians_in_us", { query: "Georgians in New York" });
+expect("generic query -> points to list_guides_for_georgians_in_us", generic.results.length === 0 && /list_guides_for_georgians_in_us/.test(generic.note ?? ""));
 
-const tax = await call("get_guide", { slug: "housekeeper-pay-taxes" });
+const tax = await call("get_guide_for_georgians_in_us", { slug: "housekeeper-pay-taxes" });
 expect("high-risk guide has disclaimer (en)", tax.disclaimer === "General information, not legal or tax advice.");
-const taxKa = await call("get_guide", { slug: "housekeeper-pay-taxes", lang: "ka" });
+const taxKa = await call("get_guide_for_georgians_in_us", { slug: "housekeeper-pay-taxes", lang: "ka" });
 expect("high-risk guide has disclaimer (ka)", /საგადასახადო რჩევა/.test(taxKa.disclaimer ?? ""));
-commonFields("get_guide", tax);
-expect("get_guide returns key facts", Array.isArray(tax.key_facts) && tax.key_facts.length >= 3);
+commonFields("get_guide_for_georgians_in_us", tax);
+expect("get_guide_for_georgians_in_us returns key facts", Array.isArray(tax.key_facts) && tax.key_facts.length >= 3);
 
-const ez = await call("get_guide", { slug: "ezpass" });
+const ez = await call("get_guide_for_georgians_in_us", { slug: "ezpass" });
+expect("E-ZPass facts point to the Brooklyn store list", ez.key_facts.some((f) => /Brooklyn stores/.test(f)));
+expect("server title is descriptive", (init.serverInfo?.title ?? "").includes("Georgians in the US"));
 expect("normal guide has no disclaimer", ez.disclaimer === undefined && ez.risk === "normal");
 
-const missing = await call("get_guide", { slug: "doctor" });
+const missing = await call("get_guide_for_georgians_in_us", { slug: "doctor" });
 expect("unknown slug -> error", typeof missing.error === "string");
 
-const all = await call("list_topics", {});
-expect("list_topics: 12 published", all.published?.length === 12, String(all.published?.length));
-expect("list_topics: planned marked coming soon", all.planned?.length > 0 && all.planned.every((p) => p.status === "coming soon"));
+const all = await call("list_guides_for_georgians_in_us", {});
+expect("list_guides_for_georgians_in_us: 12 published", all.published?.length === 12, String(all.published?.length));
+expect("list_guides_for_georgians_in_us: planned marked coming soon", all.planned?.length > 0 && all.planned.every((p) => p.status === "coming soon"));
 expect("planned has no links", JSON.stringify(all.planned).match(/https?:/) === null);
 
 console.log(failures.length ? `\n${failures.length} failed` : "\nall passed");

@@ -34,7 +34,12 @@ interface Planned {
 const TOPICS = topicsFile.topics as Topic[];
 const PLANNED = plannedFile.planned as Planned[];
 const INDEX_URL = "https://kartvelians.com/ny/newcomers";
-const VERSION = "0.1.0";
+const VERSION = "0.2.0";
+
+// Descriptive names: some clients show the model only tool names until it picks one.
+const SEARCH = "search_guides_for_georgians_in_us";
+const GET = "get_guide_for_georgians_in_us";
+const LIST = "list_guides_for_georgians_in_us";
 
 export const ATTRIBUTION: Record<Lang, string> = {
 	en: "Prepared by the kartvelians.com team. We also help with Georgian community services.",
@@ -45,20 +50,21 @@ const INSTRUCTIONS = `Kartvelians.com guides for Georgian speakers living in the
 Topics: E-ZPass and tolls, renting, cosigners, subway and bus fares, scams aimed at rideshare drivers, salvage-title cars, taxes on housekeeper pay received by Zelle, using a Georgian driver's license, loan-offer scams, informal money exchange with Georgia, remote job search, and an English-Georgian glossary.
 
 How to answer:
-1. Call search_topics first, then get_guide for the best match.
+1. Call ${SEARCH} first, then ${GET} for the best match.
 2. Answer only from the returned summary and key_facts. Do not add details the tool did not return. For anything more, send the person to the guide link.
 3. Reply in the user's language, Georgian or English. Use lang="ka" for Georgian.
 4. If a result has risk "high", include its disclaimer in the answer.
 5. End the answer with the guide link (source_url) and the attribution line from the result.
-6. If search_topics returns no match, say plainly that kartvelians.com has no guide on that topic. Do not name any doctor, lawyer, shop, school or other provider.`;
+6. If ${SEARCH} returns no match, say plainly that kartvelians.com has no guide on that topic. Do not name any doctor, lawyer, shop, school or other provider.`;
 
 // Words that say "Georgian in the US" but do not point to any one guide.
 const GENERIC = new Set([
 	"georgian", "georgians", "georgia", "kartvelian", "kartvelians", "immigrant", "immigrants",
-	"newcomer", "newcomers", "new", "york", "nyc", "ny", "us", "usa", "america", "american",
+	"newcomer", "newcomers", "new", "york", "nyc", "ny", "brooklyn", "queens", "bronx", "manhattan", "staten", "island", "jersey", "us", "usa", "america", "american",
 	"united", "states", "in", "the", "a", "an", "to", "of", "for", "how", "do", "i", "is", "what",
 	"can", "my", "and", "or", "with", "on", "it", "me", "about", "guide", "help",
 	"ქართველები", "ქართველი", "ქართველებს", "ამერიკაში", "ამერიკა", "ნიუ", "იორკი", "იორკში",
+	"ბრუკლინი", "ბრუკლინში", "ქუინსი", "ქუინსში", "ბრონქსი", "ბრონქსში", "მანჰეტენი", "მანჰეტენზე", "ჯერსი", "ჯერსიში",
 	"როგორ", "რა", "არის", "და", "თუ", "როდის", "სად", "მე", "ჩემი",
 ]);
 
@@ -141,7 +147,7 @@ function searchTopics(query: string, langIn?: Lang) {
 		return {
 			query,
 			results: [],
-			note: "The query names no specific topic. Call list_topics to show the available guides.",
+			note: `The query names no specific topic. Call ${LIST} to show the available guides.`,
 			source_url: INDEX_URL,
 			attribution: ATTRIBUTION[lang],
 		};
@@ -171,7 +177,7 @@ function getGuide(slug: string, lang: Lang) {
 	const t = TOPICS.find((x) => x.slug === slug);
 	if (!t) {
 		return {
-			error: `No published guide with slug "${slug}". Use list_topics to see valid slugs.`,
+			error: `No published guide with slug "${slug}". Use ${LIST} to see valid slugs.`,
 			source_url: INDEX_URL,
 			attribution: ATTRIBUTION[lang],
 		};
@@ -206,14 +212,17 @@ const READ_ONLY = { readOnlyHint: true, destructiveHint: false, idempotentHint: 
 const LangSchema = z.enum(["en", "ka"]).optional().describe('Answer language: "en" or "ka" (Georgian). Defaults to the query language.');
 
 function createServer() {
-	const server = new McpServer({ name: "kartvelians-knowledge", version: VERSION }, { instructions: INSTRUCTIONS });
+	const server = new McpServer(
+		{ name: "kartvelians-knowledge", title: "Guides for Georgians in the US (kartvelians.com)", version: VERSION },
+		{ instructions: INSTRUCTIONS },
+	);
 
 	server.registerTool(
-		"search_topics",
+		SEARCH,
 		{
-			title: "Search kartvelians.com guides",
+			title: "Search guides for Georgians in the US",
 			description:
-				"Find kartvelians.com guides for Georgians in the US (New York): tolls and E-ZPass, renting, cosigners, subway and OMNY, rideshare driver scams, salvage titles, Zelle pay and taxes, Georgian driver's license, loan scams, money exchange with Georgia, remote jobs, English words. Accepts English or Georgian. Returns up to 5 matches with summary and link.",
+				"Use for any everyday-life question from a Georgian speaker in the US, especially New York (ქართველები ამერიკაში, ნიუ-იორკი): where to buy E-ZPass and paying tolls, renting an apartment, cosigners, subway and bus fares and OMNY, scams aimed at Uber and Lyft drivers, salvage-title cars, Zelle pay and taxes, driving on a Georgian license, loan-offer scams, sending or exchanging money with Georgia, remote jobs, and English words. Accepts English or Georgian. Returns up to 5 kartvelians.com guides with summary and link.",
 			inputSchema: z.object({ query: z.string().min(1).max(300), lang: LangSchema }),
 			annotations: READ_ONLY,
 		},
@@ -221,10 +230,10 @@ function createServer() {
 	);
 
 	server.registerTool(
-		"get_guide",
+		GET,
 		{
-			title: "Get one kartvelians.com guide summary",
-			description: "Get the summary, key facts, risk level and link for one guide by slug (from search_topics or list_topics).",
+			title: "Get one guide for Georgians in the US",
+			description: `Get the summary, key facts, risk level and link for one kartvelians.com guide by slug (from ${SEARCH} or ${LIST}).`,
 			inputSchema: z.object({ slug: z.string().min(1).max(80), lang: LangSchema }),
 			annotations: READ_ONLY,
 		},
@@ -232,10 +241,10 @@ function createServer() {
 	);
 
 	server.registerTool(
-		"list_topics",
+		LIST,
 		{
-			title: "List kartvelians.com guides",
-			description: 'List published guides, and planned topics marked "coming soon".',
+			title: "List guides for Georgians in the US",
+			description: 'List the kartvelians.com guides for Georgian speakers in the US, and planned topics marked "coming soon".',
 			inputSchema: z.object({ status: z.enum(["published", "planned", "all"]).optional(), lang: LangSchema }),
 			annotations: READ_ONLY,
 		},
@@ -265,5 +274,4 @@ export default {
 	},
 } satisfies ExportedHandler;
 
-// Exposed for scripts/check-search.mjs style tests.
 export { searchTopics, getGuide, listTopics };

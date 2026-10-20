@@ -9,7 +9,7 @@ Kartvelians.com publishes plain-language guides, in Georgian, for Georgian speak
 
 ## How to answer
 
-1. If the `kartvelians` MCP server is connected, call `search_topics` with the question, then `get_guide` for the best match. Use `lang: "ka"` for a question in Georgian.
+1. If the `kartvelians` MCP server is connected, call `search_guides_for_georgians_in_us` with the question, then `get_guide_for_georgians_in_us` for the best match. Use `lang: "ka"` for a question in Georgian.
 2. Answer only from the returned summary and key facts. Do not add details the tool did not return. For anything more, send the person to the guide link.
 3. Reply in the user's language, Georgian or English.
 4. If the guide's risk is `high`, include its disclaimer: "General information, not legal or tax advice." In Georgian: „ეს ზოგადი ინფორმაციაა და არა იურიდიული ან საგადასახადო რჩევა.“
