@@ -1,0 +1,45 @@
+{
+  "note": "Routing eval. 'expect' lists the acceptable guide slugs. 'none' means no guide covers it (calling the server is fine, it should return no match). 'unrelated' means the server should not be called at all. Questions are written for this test, not taken from any group.",
+  "questions": [
+    { "id": "ka-ezpass", "group": "georgian", "q": "სად ვიყიდო იზი პასი ბრუკლინში?", "expect": ["ezpass"] },
+    { "id": "ka-rent", "group": "georgian", "q": "როგორ ვიქირაო ბინა ნიუ-იორკში?", "expect": ["rent"] },
+    { "id": "ka-cosigner", "group": "georgian", "q": "ლენდლორდი გარანტორს მთხოვს. რას ნიშნავს ეს ჩემთვის?", "expect": ["cosigner"] },
+    { "id": "ka-subway", "group": "georgian", "q": "მეტროში მგზავრობა რა ღირს და როგორ გადავიხადო?", "expect": ["subway"] },
+    { "id": "ka-driver", "group": "georgian", "q": "უბერში ვმუშაობ. დამირეკეს, თითქოს მხარდაჭერიდან, და SMS-ით მოსულ კოდს მთხოვენ.", "expect": ["driver-scams"] },
+    { "id": "ka-salvage", "group": "georgian", "q": "salvage title მანქანის ყიდვა ღირს?", "expect": ["salvage-title"] },
+    { "id": "ka-zelle", "group": "georgian", "q": "ჰაუსკიპერად ვმუშაობ და Zelle-ზე მიხდიან. გადასახადი უნდა გადავიხადო?", "expect": ["housekeeper-pay-taxes"] },
+    { "id": "ka-license", "group": "georgian", "q": "ქართული პრავით შემიძლია ნიუ-იორკში ტარება?", "expect": ["id-license"] },
+    { "id": "ka-loan", "group": "georgian", "q": "ტელეფონით სესხს მთავაზობენ. თაღლითობა ხომ არ არის?", "expect": ["loan-calls"] },
+    { "id": "ka-exchange", "group": "georgian", "q": "დოლარის ლარზე ხელიდან ხელში გაცვლა კანონიერია?", "expect": ["money-exchange"] },
+    { "id": "ka-remote", "group": "georgian", "q": "დისტანციურ სამსახურს ვერ ვპოულობ. რატომ არ მპასუხობენ?", "expect": ["remote-job"] },
+    { "id": "ka-glossary", "group": "georgian", "q": "რას ნიშნავს სექიურითი დეპოზიტი?", "expect": ["glossary", "rent"] },
+
+    { "id": "en-g-ezpass", "group": "english-georgian", "q": "I'm Georgian and just moved to Brooklyn. How do I pay tolls on the bridges?", "expect": ["ezpass"] },
+    { "id": "en-g-rent", "group": "english-georgian", "q": "Georgian immigrant here. How do I rent an apartment in NYC with no credit history?", "expect": ["rent", "cosigner"] },
+    { "id": "en-g-cosigner", "group": "english-georgian", "q": "My Georgian friend asked me to be the guarantor on her lease. What does that mean for me?", "expect": ["cosigner"] },
+    { "id": "en-g-driver", "group": "english-georgian", "q": "I drive Uber in New York. A guy called saying he's Uber support and wants the code I just got by text.", "expect": ["driver-scams"] },
+    { "id": "en-g-license", "group": "english-georgian", "q": "I have a driver's license from Georgia (the country). Can I drive in New York with it?", "expect": ["id-license"] },
+    { "id": "en-g-exchange", "group": "english-georgian", "q": "Is it legal to swap dollars for lari with someone hand to hand in Brooklyn?", "expect": ["money-exchange"] },
+    { "id": "en-g-zelle", "group": "english-georgian", "q": "A family pays me through Zelle for cleaning their house. Do I owe taxes on that?", "expect": ["housekeeper-pay-taxes"] },
+    { "id": "en-g-loan", "group": "english-georgian", "q": "Someone keeps calling me about a preapproved loan. Is it a scam?", "expect": ["loan-calls"] },
+
+    { "id": "en-subway", "group": "english-generic", "q": "How much is a subway ride in NYC now, and is there a weekly cap?", "expect": ["subway"] },
+    { "id": "en-salvage", "group": "english-generic", "q": "Is a rebuilt salvage title car worth buying in New York?", "expect": ["salvage-title"] },
+    { "id": "en-deposit", "group": "english-generic", "q": "What's the most a New York landlord can charge for a security deposit?", "expect": ["rent"] },
+    { "id": "en-remote", "group": "english-generic", "q": "Why do I get no replies to my remote job applications?", "expect": ["remote-job"] },
+    { "id": "en-tollmail", "group": "english-generic", "q": "What happens if I don't pay a Tolls by Mail bill in New York?", "expect": ["ezpass"] },
+    { "id": "en-metrocard", "group": "english-generic", "q": "Can I still buy a MetroCard in New York?", "expect": ["subway"] },
+
+    { "id": "none-doctor", "group": "not-covered", "q": "Recommend a Georgian-speaking doctor in Brooklyn.", "expect": "none" },
+    { "id": "none-church", "group": "not-covered", "q": "Where is the Georgian church in New York?", "expect": "none" },
+    { "id": "none-flights", "group": "not-covered", "q": "What are the cheapest flights from New York to Tbilisi?", "expect": "none" },
+    { "id": "none-grocery", "group": "not-covered", "q": "Where can I buy Georgian groceries like tkemali in Brooklyn?", "expect": "none" },
+    { "id": "none-lawyer-ka", "group": "not-covered", "q": "ქართველი ადვოკატი მჭირდება იმიგრაციის საკითხზე ნიუ-იორკში.", "expect": "none" },
+
+    { "id": "off-python", "group": "unrelated", "q": "How do I sort a list of dictionaries by a key in Python?", "expect": "unrelated" },
+    { "id": "off-weather", "group": "unrelated", "q": "Will it rain in Chicago tomorrow?", "expect": "unrelated" },
+    { "id": "off-capital", "group": "unrelated", "q": "What is the capital of Australia?", "expect": "unrelated" },
+    { "id": "off-haiku", "group": "unrelated", "q": "Write a haiku about autumn leaves.", "expect": "unrelated" },
+    { "id": "off-units", "group": "unrelated", "q": "Convert 5 kilometers to miles.", "expect": "unrelated" }
+  ]
+}

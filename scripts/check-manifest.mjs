@@ -111,6 +111,7 @@ function walk(dir) {
 	for (const name of readdirSync(dir)) {
 		if (SKIP.has(name)) continue;
 		const p = join(dir, name);
+		if (relative(ROOT, p) === "eval/results") continue; // generated test output, not committed
 		if (statSync(p).isDirectory()) walk(p);
 		else if (/\.(md|json|txt|ts|mjs|js|toml|ya?ml)$/.test(name) && !name.endsWith("lock.json")) {
 			const text = readFileSync(p, "utf8");

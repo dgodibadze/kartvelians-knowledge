@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP Spot Check</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1c1c1c; --muted: #5f6368; --line: #dcdcdc; --card: #f6f6f4;
+    --accent: #1a5fb4; --ok: #1e7b34; --bad: #b3261e; --warn: #8a5a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161616; --fg: #ececec; --muted: #a3a3a3; --line: #333; --card: #202020;
+      --accent: #78a9ff; --ok: #6fcf86; --bad: #ff8a80; --warn: #e3b341; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 28px 0 8px; }
+  p, li { color: var(--fg); }
+  .muted { color: var(--muted); }
+  code { background: var(--card); padding: 1px 5px; border-radius: 4px; }
+  .setup { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .box { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+  .box h3 { margin: 0 0 6px; font-size: 15px; }
+  .q { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; margin: 10px 0; }
+  .qhead { display: flex; gap: 10px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
+  .qtext { font-size: 16px; font-weight: 600; flex: 1 1 320px; }
+  .expect { font-size: 13px; color: var(--muted); margin: 4px 0 8px; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--bg); color: var(--fg); border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.copied { border-color: var(--ok); color: var(--ok); }
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+  label { font-size: 13px; color: var(--muted); display: block; margin-bottom: 2px; }
+  select { width: 100%; font: inherit; padding: 5px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+  select.pass { border-color: var(--ok); } select.fail { border-color: var(--bad); } select.part { border-color: var(--warn); }
+  .bar { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>MCP spot check</h1>
+  <p class="muted">Paste each question into a new chat in each app with the kartvelians connector added, then record what happened. Your answers are saved in this browser only. When done, press "Copy results" and paste them back to Claude.</p>
+
+  <h2>Setup</h2>
+  <div class="setup">
+    <div class="box"><h3>Claude (claude.ai)</h3>Works on the free plan. Settings, Connectors, Add custom connector, URL <code>https://kartvelians.com/mcp</code>. Start a new chat after adding it.</div>
+    <div class="box"><h3>ChatGPT</h3>Paid plans only, through Developer mode (Settings, then look for Developer mode or Connectors). Sources disagree on which paid plans have it. Free accounts cannot add a custom server.</div>
+    <div class="box"><h3>Grok (grok.com)</h3>Paid plans only. grok.com/connectors, New Connector, Custom, paste the URL.</div>
+  </div>
+
+  <h2>Questions</h2>
+  <div id="list"></div>
+
+  <div class="bar">
+    <button id="copyAll">Copy results</button>
+    <button id="reset">Clear answers</button>
+  </div>
+</main>
+<script>
+const URL_ = "https://kartvelians.com/mcp";
+const APPS = ["Claude", "ChatGPT", "Grok"];
+const OPTIONS = [
+  ["", "not tested"],
+  ["right", "used kartvelians, right guide"],
+  ["wrong", "used kartvelians, wrong guide"],
+  ["web", "did not use it (web or memory)"],
+  ["na", "app can't add the connector"],
+];
+const Q = [
+  { id: 1, q: "სად ვიყიდო იზი პასი ბრუკლინში?", expect: "E-ZPass guide. Should mention the guide's Brooklyn store list and link to it." },
+  { id: 2, q: "How do I pay tolls in New York?", expect: "E-ZPass guide with the kartvelians.com link." },
+  { id: 3, q: "როგორ ვიქირაო ბინა ნიუ-იორკში?", expect: "Renting guide, answer in Georgian." },
+  { id: 4, q: "A family pays me through Zelle for cleaning their house. Do I owe taxes on that?", expect: "Housekeeper tax guide plus the note: general information, not legal or tax advice." },
+  { id: 5, q: "ქართული პრავით შემიძლია ნიუ-იორკში ტარება?", expect: "Georgian driver's license guide, answer in Georgian." },
+  { id: 6, q: "I drive Uber in New York. Someone from \"support\" called and wants the code I just got by text.", expect: "Driver scams guide." },
+  { id: 7, q: "Recommend a Georgian-speaking doctor in Brooklyn.", expect: "kartvelians has no guide on this. Pass if it does not invent a kartvelians recommendation. 'Did not use it' is also fine here." },
+  { id: 8, q: "What is the capital of Australia?", expect: "Should NOT use kartvelians. Pick 'did not use it' if it answered without it." },
+];
+const KEY = "kk-spot-check-v1";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { state = {}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+
+function grade(id, v) {
+  if (!v || v === "na") return "";
+  if (id === 8) return v === "web" ? "pass" : "fail";
+  if (id === 7) return v === "wrong" ? "fail" : "pass";
+  return v === "right" ? "pass" : v === "wrong" ? "part" : "fail";
+}
+
+function copy(text, btn) {
+  const done = () => { btn.classList.add("copied"); const t = btn.textContent; btn.textContent = "Copied"; setTimeout(() => { btn.textContent = t; btn.classList.remove("copied"); }, 1200); };
+  if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, () => fallback(text, done));
+  else fallback(text, done);
+}
+function fallback(text, done) {
+  const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); done(); } catch (e) {} ta.remove();
+}
+
+const list = document.getElementById("list");
+for (const item of Q) {
+  const div = document.createElement("div"); div.className = "q";
+  div.innerHTML = `<div class="qhead"><div class="qtext">${item.id}. ${item.q}</div><button>Copy question ${item.id}</button></div><div class="expect">Expected: ${item.expect}</div><div class="apps"></div>`;
+  div.querySelector("button").addEventListener("click", (e) => copy(item.q, e.target));
+  const apps = div.querySelector(".apps");
+  for (const app of APPS) {
+    const wrap = document.createElement("div");
+    const k = `${item.id}-${app}`;
+    const sel = document.createElement("select");
+    sel.setAttribute("aria-label", `${app}, question ${item.id}`);
+    for (const [v, label] of OPTIONS) { const o = document.createElement("option"); o.value = v; o.textContent = label; sel.appendChild(o); }
+    sel.value = state[k] || "";
+    const paint = () => { sel.className = grade(item.id, sel.value); };
+    paint();
+    sel.addEventListener("change", () => { state[k] = sel.value; save(); paint(); });
+    wrap.innerHTML = `<label>${app}</label>`; wrap.appendChild(sel); apps.appendChild(wrap);
+  }
+  list.appendChild(div);
+}
+
+document.getElementById("copyAll").addEventListener("click", (e) => {
+  const lines = [`MCP spot check, ${URL_}`];
+  for (const item of Q) {
+    const cells = APPS.map((app) => `${app}: ${state[`${item.id}-${app}`] || "not tested"}`).join(" | ");
+    lines.push(`Q${item.id} ${cells}`);
+  }
+  copy(lines.join("\n"), e.target);
+});
+document.getElementById("reset").addEventListener("click", () => {
+  state = {}; save(); document.querySelectorAll("select").forEach((s) => { s.value = ""; s.className = ""; });
+});
+</script>
+</body>
+</html>
