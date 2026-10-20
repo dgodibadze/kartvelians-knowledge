@@ -140,6 +140,8 @@ if (LIVE) {
 		}
 		const page = (await res.text())
 			.replace(/<(script|style)[\s\S]*?<\/\1>/gi, " ")
+			// The site shows our own English summary in this box; compare against the guide text only.
+			.replace(/<aside[^>]*class="[^"]*\bnc-en\b[^"]*"[\s\S]*?<\/aside>/gi, " ")
 			.replace(/<[^>]+>/g, " ");
 		const pw = words(page);
 		const shingles = new Set();
