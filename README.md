@@ -72,6 +72,11 @@ When a guide goes live on kartvelians.com:
 6. Commit, push, then deploy the Worker with `npx wrangler deploy` from `mcp-server/`.
 7. Refresh `llms.txt` with `curl -s https://kartvelians.com/llms.txt > llms.txt` once the site's copy lists the guide.
 
+## Privacy
+
+The server has no sign-in, sets no cookies and stores nothing. See [PRIVACY.md](PRIVACY.md).
+Questions: support@kartvelians.com.
+
 ## Licenses
 
 Code: MIT, see `LICENSE`. Summaries: CC BY 4.0, see `CONTENT-LICENSE.md`. The full guides are not
