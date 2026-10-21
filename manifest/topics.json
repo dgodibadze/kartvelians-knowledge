@@ -5,7 +5,7 @@
   "topics": [
     {
       "slug": "ezpass",
-      "title_ka": "E-ZPass ნიუ-იორკში: სად იყიდო ონლაინის გარეშე და როგორ ჩართო",
+      "title_ka": "E-ZPass ნიუ-იორკში: სად იყიდება ონლაინის გარეშე და როგორ რეგისტრირდება",
       "title_en": "E-ZPass in New York",
       "summary_en": "How to get an E-ZPass tag in New York without ordering online: buying the On-the-Go tag in a store, with a list of Brooklyn locations, then registering it and funding the account, including with cash. It also covers Tolls by Mail costs, the Manhattan congestion zone, rented cars and toll disputes.",
       "summary_ka": "როგორ შეიძლება E-ZPass-ის შეძენა ნიუ-იორკში ონლაინ შეკვეთის გარეშე: On-the-Go თეგის ყიდვა მაღაზიაში (სტატიაში ბრუკლინის მაღაზიების სიაა), მისი რეგისტრაცია და ანგარიშის შევსება, მათ შორის ნაღდი ფულით. სტატია ასევე ეხება Tolls by Mail-ის ღირებულებას, მანჰეტენის გადატვირთულობის ზონას, ნაქირავებ მანქანას და საფასურის გასაჩივრებას.",
@@ -84,7 +84,7 @@
     },
     {
       "slug": "subway",
-      "title_ka": "მეტრო და ავტობუსი ნიუ-იორკში: როგორ გადაიხადო, სად იყიდო OMNY ბარათი და რა ღირს",
+      "title_ka": "მეტრო და ავტობუსი ნიუ-იორკში: გადახდა, OMNY ბარათი და ფასები",
       "title_en": "Subway and bus in New York",
       "summary_en": "How New York City subway and bus fares work with OMNY tap-to-pay: prices, the weekly fare cap, free transfers, where to buy and reload an OMNY card, reduced fares and the end of the MetroCard.",
       "summary_ka": "როგორ მუშაობს ნიუ-იორკის მეტროსა და ავტობუსის საფასური OMNY-ით შეხებით გადახდისას: ფასები, კვირის ლიმიტი, უფასო გადაჯდომა, სად იყიდება და ივსება OMNY ბარათი, შეღავათიანი ტარიფები და MetroCard-ის გაუქმება.",
@@ -111,7 +111,7 @@
     },
     {
       "slug": "driver-scams",
-      "title_ka": "Uber-ისა და Lyft-ის მძღოლებისთვის: როგორ ამოიცნო თაღლითობა და არ დაკარგო ფული",
+      "title_ka": "თაღლითობა Uber-ისა და Lyft-ის მძღოლების წინააღმდეგ: როგორ მუშაობს და რას წერენ კომპანიები",
       "title_en": "Scams aimed at Uber and Lyft drivers",
       "summary_en": "Scams aimed at Uber and Lyft drivers, mainly fake support calls and texts that try to steal verification codes, logins and earnings. The guide lists common patterns, what the companies and federal agencies say, how real support differs from fake, and where scams are reported.",
       "summary_ka": "თაღლითური სქემები Uber-ისა და Lyft-ის მძღოლების წინააღმდეგ, ძირითადად ყალბი „მხარდაჭერის“ ზარები და SMS-ები, რომლითაც დადასტურების კოდს, ანგარიშსა და შემოსავალს იპარავენ. სტატია აღწერს გავრცელებულ სქემებს, კომპანიებისა და ფედერალური უწყებების პოზიციას, ნამდვილი მხარდაჭერის ამოცნობას და იმას, სად შეიძლება თაღლითობის შეტყობინება.",
@@ -138,7 +138,7 @@
     },
     {
       "slug": "salvage-title",
-      "title_ka": "Salvage title მანქანა: რას ნიშნავს, რა რისკი ახლავს და ღირს თუ არა ყიდვა",
+      "title_ka": "Salvage title მანქანა: რას ნიშნავს და რა რისკი ახლავს",
       "title_en": "Salvage-title cars",
       "summary_en": "What salvage and rebuilt salvage titles mean in New York State, what the DMV salvage inspection does and does not check, the risks of buying such a car, and the checks available before purchase, such as VIN history and recall lookups.",
       "summary_ka": "რას ნიშნავს salvage და Rebuilt Salvage საკუთრების მოწმობა ნიუ-იორკის შტატში, რას ამოწმებს და რას არა DMV-ის შემოწმება, რა რისკი ახლავს ასეთი მანქანის ყიდვას და რისი გადამოწმებაა შესაძლებელი ყიდვამდე, მაგალითად VIN-ით ისტორიისა და გამოხმობების (recall) ძებნა.",
@@ -281,7 +281,7 @@
     },
     {
       "slug": "remote-job",
-      "title_ka": "დისტანციური სამსახური ვერ იპოვე? რა ხდება სინამდვილეში და რა შეგიძლია შეცვალო",
+      "title_ka": "დისტანციური სამსახური ვერ იპოვე? რა ხდება სინამდვილეში და რას ეძებს კომპანია",
       "title_en": "Can't find a remote job?",
       "summary_en": "Why remote job applications in the US often get no reply: how few postings are fully remote, how many people apply to each, and why employers screen for hiring risk. It also covers resumes and search methods, the legal and tax reasons companies hire locally, and job scams.",
       "summary_ka": "რატომ რჩება ხშირად უპასუხოდ აშშ-ში დისტანციურ სამსახურზე გაგზავნილი განაცხადი: რამდენად ცოტაა სრულად დისტანციური ვაკანსია, რამდენი ადამიანი აგზავნის განაცხადს და რატომ აფასებენ დამსაქმებლები დაქირავების რისკს. სტატია ასევე ეხება რეზიუმეს, ძებნის მეთოდს, ადგილობრივად დაქირავების მიზეზებს და თაღლითობას.",
