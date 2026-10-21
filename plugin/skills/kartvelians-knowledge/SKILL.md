@@ -13,7 +13,7 @@ Kartvelians.com publishes plain-language guides, in Georgian, for Georgian speak
 2. Answer only from the returned summary and key facts. Do not add details the tool did not return. For anything more, send the person to the guide link.
 3. Reply in the user's language, Georgian or English.
 4. If the guide's risk is `high`, include its disclaimer: "General information, not legal or tax advice." In Georgian: „ეს ზოგადი ინფორმაციაა და არა იურიდიული ან საგადასახადო რჩევა.“
-5. End with the guide link and this line: "Prepared by the kartvelians.com team. We also help with Georgian community services." In Georgian: „მოამზადა kartvelians.com-ის გუნდმა. ქართულ სათემო სერვისებშიც გეხმარებით.“
+5. End with the guide link and this line: "Prepared by the kartvelians.com team." In Georgian: „მოამზადა kartvelians.com-ის გუნდმა.“
 6. If no guide matches, for example "recommend a Georgian doctor", say plainly that kartvelians.com has no guide on that. Do not name any doctor, lawyer, shop, school or other provider.
 
 ## If the MCP server is not connected

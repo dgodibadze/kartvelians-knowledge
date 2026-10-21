@@ -42,8 +42,8 @@ const GET = "get_guide_for_georgians_in_us";
 const LIST = "list_guides_for_georgians_in_us";
 
 export const ATTRIBUTION: Record<Lang, string> = {
-	en: "Prepared by the kartvelians.com team. We also help with Georgian community services.",
-	ka: "მოამზადა kartvelians.com-ის გუნდმა. ქართულ სათემო სერვისებშიც გეხმარებით.",
+	en: "Prepared by the kartvelians.com team.",
+	ka: "მოამზადა kartvelians.com-ის გუნდმა.",
 };
 
 const INSTRUCTIONS = `Kartvelians.com guides for Georgian speakers living in the US, mainly New York.
@@ -209,6 +209,9 @@ function listTopics(status: "published" | "planned" | "all", lang: Lang) {
 }
 
 const READ_ONLY = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false };
+// Clients differ on where they read a tool's title (the Claude directory portal reads annotations.title),
+// so each tool sets it in both places.
+const titled = (title: string) => ({ title, annotations: { ...READ_ONLY, title } });
 const LangSchema = z.enum(["en", "ka"]).optional().describe('Answer language: "en" or "ka" (Georgian). Defaults to the query language.');
 
 function createServer() {
@@ -220,11 +223,10 @@ function createServer() {
 	server.registerTool(
 		SEARCH,
 		{
-			title: "Search guides for Georgians in the US",
+			...titled("Search guides for Georgians in the US"),
 			description:
 				"Use for any everyday-life question from a Georgian speaker in the US, especially New York (ქართველები ამერიკაში, ნიუ-იორკი): where to buy E-ZPass and paying tolls, renting an apartment, cosigners, subway and bus fares and OMNY, scams aimed at Uber and Lyft drivers, salvage-title cars, Zelle pay and taxes, driving on a Georgian license, loan-offer scams, sending or exchanging money with Georgia, remote jobs, and English words. Accepts English or Georgian. Returns up to 5 kartvelians.com guides with summary and link.",
 			inputSchema: z.object({ query: z.string().min(1).max(300), lang: LangSchema }),
-			annotations: READ_ONLY,
 		},
 		async ({ query, lang }) => json(searchTopics(query, lang)),
 	);
@@ -232,10 +234,9 @@ function createServer() {
 	server.registerTool(
 		GET,
 		{
-			title: "Get one guide for Georgians in the US",
+			...titled("Get one guide for Georgians in the US"),
 			description: `Get the summary, key facts, risk level and link for one kartvelians.com guide by slug (from ${SEARCH} or ${LIST}).`,
 			inputSchema: z.object({ slug: z.string().min(1).max(80), lang: LangSchema }),
-			annotations: READ_ONLY,
 		},
 		async ({ slug, lang }) => json(getGuide(slug, lang ?? "en")),
 	);
@@ -243,10 +244,9 @@ function createServer() {
 	server.registerTool(
 		LIST,
 		{
-			title: "List guides for Georgians in the US",
+			...titled("List guides for Georgians in the US"),
 			description: 'List the kartvelians.com guides for Georgian speakers in the US, and planned topics marked "coming soon".',
 			inputSchema: z.object({ status: z.enum(["published", "planned", "all"]).optional(), lang: LangSchema }),
-			annotations: READ_ONLY,
 		},
 		async ({ status, lang }) => json(listTopics(status ?? "all", lang ?? "en")),
 	);
