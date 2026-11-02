@@ -74,7 +74,8 @@ When a guide goes live on kartvelians.com:
 
 ## Privacy
 
-The server has no sign-in, sets no cookies and stores nothing. See [PRIVACY.md](PRIVACY.md).
+The server has no sign-in, sets no cookies and stores nothing. The policy is published at
+https://kartvelians.com/privacy/mcp, with a copy in [PRIVACY.md](PRIVACY.md).
 Questions: support@kartvelians.com.
 
 ## Licenses

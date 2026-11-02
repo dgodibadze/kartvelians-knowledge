@@ -3,12 +3,13 @@ main = "src/index.ts"
 compatibility_date = "2026-10-01"
 compatibility_flags = ["nodejs_compat"]
 
-# Serve only https://kartvelians.com/mcp. The exact-path route runs before the site Worker,
-# which keeps every other path. No workers.dev URL, no bindings, no secrets.
+# Serve only https://kartvelians.com/mcp and its privacy page at /privacy/mcp. These exact-path
+# routes run before the site Worker, which keeps every other path. No workers.dev URL, no bindings, no secrets.
 workers_dev = false
 preview_urls = false
 routes = [
-  { pattern = "kartvelians.com/mcp", zone_name = "kartvelians.com" }
+  { pattern = "kartvelians.com/mcp", zone_name = "kartvelians.com" },
+  { pattern = "kartvelians.com/privacy/mcp", zone_name = "kartvelians.com" }
 ]
 
 [observability]

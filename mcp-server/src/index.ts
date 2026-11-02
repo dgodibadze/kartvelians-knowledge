@@ -6,6 +6,7 @@ import { createMcpHandler } from "agents/mcp/server";
 import { z } from "zod";
 import topicsFile from "../../manifest/topics.json";
 import plannedFile from "../../manifest/planned.json";
+import { PRIVACY_HTML, PRIVACY_PATH } from "./privacy";
 
 type Lang = "en" | "ka";
 
@@ -46,16 +47,15 @@ export const ATTRIBUTION: Record<Lang, string> = {
 	ka: "მოამზადა kartvelians.com-ის გუნდმა.",
 };
 
-const INSTRUCTIONS = `Kartvelians.com guides for Georgian speakers living in the US, mainly New York.
+const INSTRUCTIONS = `Read-only server for kartvelians.com, which publishes plain-language guides for Georgian speakers living in the US, mainly New York. Guides are available in English and Georgian.
 Topics: E-ZPass and tolls, renting, cosigners, subway and bus fares, scams aimed at rideshare drivers, salvage-title cars, taxes on housekeeper pay received by Zelle, using a Georgian driver's license, loan-offer scams, informal money exchange with Georgia, remote job search, and an English-Georgian glossary.
 
-How to answer:
-1. Call ${SEARCH} first, then ${GET} for the best match.
-2. Answer only from the returned summary and key_facts. Do not add details the tool did not return. For anything more, send the person to the guide link.
-3. Reply in the user's language, Georgian or English. Use lang="ka" for Georgian.
-4. If a result has risk "high", include its disclaimer in the answer.
-5. End the answer with the guide link (source_url) and the attribution line from the result.
-6. If ${SEARCH} returns no match, say plainly that kartvelians.com has no guide on that topic. Do not name any doctor, lawyer, shop, school or other provider.`;
+Tools:
+- ${SEARCH} finds the guides that match a question in English or Georgian and returns up to 5, each with slug, title, summary, risk level and url. When no guide covers the topic, it returns an empty results list with match set to false.
+- ${GET} returns one guide by slug: summary, key_facts, risk level, a disclaimer for high-risk topics, the date the summary was last updated, source_url and an attribution line.
+- ${LIST} lists every published guide and the topics planned as "coming soon".
+
+The summaries and key facts are short extracts. The full guide is on the page at source_url. Two topics, taxes on housekeeper pay and informal money exchange, have risk "high" and a disclaimer field. The lang parameter takes "en" or "ka" (Georgian) and defaults to the language of the query.`;
 
 // Words that say "Georgian in the US" but do not point to any one guide.
 const GENERIC = new Set([
@@ -137,8 +137,8 @@ function json(value: unknown) {
 }
 
 const NO_MATCH: Record<Lang, string> = {
-	en: "No kartvelians.com guide covers this topic. Say so plainly. Do not name or recommend any provider, business or person.",
-	ka: "ამ თემაზე kartvelians.com-ზე სახელმძღვანელო არ არის. უთხარით ეს პირდაპირ. არ დაასახელოთ და არ ურჩიოთ არც ერთი პროვაიდერი, ბიზნესი ან ადამიანი.",
+	en: "No kartvelians.com guide covers this topic.",
+	ka: "ამ თემაზე kartvelians.com-ზე სახელმძღვანელო არ არის.",
 };
 
 function searchTopics(query: string, langIn?: Lang) {
@@ -147,7 +147,8 @@ function searchTopics(query: string, langIn?: Lang) {
 		return {
 			query,
 			results: [],
-			note: `The query names no specific topic. Call ${LIST} to show the available guides.`,
+			match: false,
+			note: `The query names no specific topic. ${LIST} returns every available guide.`,
 			source_url: INDEX_URL,
 			attribution: ATTRIBUTION[lang],
 		};
@@ -157,10 +158,11 @@ function searchTopics(query: string, langIn?: Lang) {
 		.sort((a, b) => b.s - a.s)
 		.slice(0, 5);
 	if (ranked.length === 0) {
-		return { query, results: [], note: NO_MATCH[lang], source_url: INDEX_URL, attribution: ATTRIBUTION[lang] };
+		return { query, results: [], match: false, note: NO_MATCH[lang], source_url: INDEX_URL, attribution: ATTRIBUTION[lang] };
 	}
 	return {
 		query,
+		match: true,
 		results: ranked.map(({ item }) => ({
 			slug: item.topic.slug,
 			title: title(item.topic, lang),
@@ -177,7 +179,7 @@ function getGuide(slug: string, lang: Lang) {
 	const t = TOPICS.find((x) => x.slug === slug);
 	if (!t) {
 		return {
-			error: `No published guide with slug "${slug}". Use ${LIST} to see valid slugs.`,
+			error: `No published guide with slug "${slug}". ${LIST} returns the valid slugs.`,
 			source_url: INDEX_URL,
 			attribution: ATTRIBUTION[lang],
 		};
@@ -193,7 +195,7 @@ function getGuide(slug: string, lang: Lang) {
 		url: t.url,
 		source_url: t.url,
 		attribution: ATTRIBUTION[lang],
-		note: "Answer only from this summary and these key facts. For anything else, send the reader to the url.",
+		note: "This is a short summary. The full guide is at source_url.",
 	};
 }
 
@@ -212,7 +214,7 @@ const READ_ONLY = { readOnlyHint: true, destructiveHint: false, idempotentHint: 
 // Clients differ on where they read a tool's title (the Claude directory portal reads annotations.title),
 // so each tool sets it in both places.
 const titled = (title: string) => ({ title, annotations: { ...READ_ONLY, title } });
-const LangSchema = z.enum(["en", "ka"]).optional().describe('Answer language: "en" or "ka" (Georgian). Defaults to the query language.');
+const LangSchema = z.enum(["en", "ka"]).optional().describe('Response language: "en" or "ka" (Georgian). Defaults to the query language.');
 
 function createServer() {
 	const server = new McpServer(
@@ -225,7 +227,7 @@ function createServer() {
 		{
 			...titled("Search guides for Georgians in the US"),
 			description:
-				"Use for any everyday-life question from a Georgian speaker in the US, especially New York (ქართველები ამერიკაში, ნიუ-იორკი): where to buy E-ZPass and paying tolls, renting an apartment, cosigners, subway and bus fares and OMNY, scams aimed at Uber and Lyft drivers, salvage-title cars, Zelle pay and taxes, driving on a Georgian license, loan-offer scams, sending or exchanging money with Georgia, remote jobs, and English words. Accepts English or Georgian. Returns up to 5 kartvelians.com guides with summary and link.",
+				"Finds kartvelians.com guides for everyday-life questions from Georgian speakers in the US, especially New York (ქართველები ამერიკაში, ნიუ-იორკი): where to buy E-ZPass and paying tolls, renting an apartment, cosigners, subway and bus fares and OMNY, scams aimed at Uber and Lyft drivers, salvage-title cars, Zelle pay and taxes, driving on a Georgian license, loan-offer scams, sending or exchanging money with Georgia, remote jobs, and English words. Accepts English or Georgian. Returns up to 5 kartvelians.com guides with summary and link.",
 			inputSchema: z.object({ query: z.string().min(1).max(300), lang: LangSchema }),
 		},
 		async ({ query, lang }) => json(searchTopics(query, lang)),
@@ -264,9 +266,14 @@ export default {
 	fetch(request: Request, env: unknown, ctx: ExecutionContext) {
 		const url = new URL(request.url);
 		if (url.pathname === "/mcp") return mcp(request, env, ctx);
+		if (url.pathname === PRIVACY_PATH && (request.method === "GET" || request.method === "HEAD")) {
+			return new Response(request.method === "HEAD" ? null : PRIVACY_HTML, {
+				headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=3600" },
+			});
+		}
 		if (url.pathname === "/" && request.method === "GET") {
 			return new Response(
-				`kartvelians-knowledge MCP server (read-only).\nConnect an MCP client to https://kartvelians.com/mcp\nGuides: ${INDEX_URL}\n`,
+				`kartvelians-knowledge MCP server (read-only).\nConnect an MCP client to https://kartvelians.com/mcp\nGuides: ${INDEX_URL}\nPrivacy: https://kartvelians.com${PRIVACY_PATH}\n`,
 				{ headers: { "content-type": "text/plain; charset=utf-8" } },
 			);
 		}
