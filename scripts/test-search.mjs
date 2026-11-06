@@ -42,11 +42,15 @@ const init = await rpc("initialize", {
 	clientInfo: { name: "test-search", version: "0" },
 });
 expect("initialize returns instructions", (init.instructions ?? "").includes("search_guides_for_georgians_in_us"));
+// Directory review: instructions and results describe the tools; they do not tell the assistant how to answer.
+const DIRECTIVE = /\b(answer only|do not|don't|say so|reply in|end the answer|include its|call \w+ first|you must|always|never)\b/i;
+expect("instructions describe, not direct", !DIRECTIVE.test(init.instructions ?? ""), (init.instructions ?? "").match(DIRECTIVE)?.[0]);
 
 const tools = await rpc("tools/list", {});
 const names = tools.tools.map((t) => t.name).sort().join(",");
 expect("three read-only tools", names === "get_guide_for_georgians_in_us,list_guides_for_georgians_in_us,search_guides_for_georgians_in_us", names);
 expect("all tools marked read-only", tools.tools.every((t) => t.annotations?.readOnlyHint === true));
+expect("all tools have a title annotation", tools.tools.every((t) => typeof t.annotations?.title === "string" && t.annotations.title.length > 0));
 
 const cases = [
 	["How do I pay tolls in New York?", "ezpass", "en"],
@@ -77,7 +81,8 @@ for (const [q, slug, lang] of cases) {
 
 for (const q of ["Recommend a Georgian doctor", "best Georgian restaurant in Brooklyn", "ქართველი სტომატოლოგი მჭირდება"]) {
 	const r = await call("search_guides_for_georgians_in_us", { query: q });
-	expect(`"${q}" -> no match`, r.results.length === 0, `got ${r.results.map((x) => x.slug).join(",")}`);
+	expect(`"${q}" -> no match`, r.results.length === 0 && r.match === false, `got ${r.results.map((x) => x.slug).join(",")}`);
+	expect(`"${q}" -> note is data, not a directive`, !DIRECTIVE.test(r.note ?? ""), r.note);
 	expect(`"${q}" -> says no guide`, /no kartvelians\.com guide|სახელმძღვანელო არ არის/i.test(r.note ?? ""));
 	commonFields(q, r);
 }
@@ -90,6 +95,7 @@ expect("high-risk guide has disclaimer (en)", tax.disclaimer === "General inform
 const taxKa = await call("get_guide_for_georgians_in_us", { slug: "housekeeper-pay-taxes", lang: "ka" });
 expect("high-risk guide has disclaimer (ka)", /საგადასახადო რჩევა/.test(taxKa.disclaimer ?? ""));
 commonFields("get_guide_for_georgians_in_us", tax);
+expect("get_guide note is data, not a directive", !DIRECTIVE.test(tax.note ?? ""), tax.note);
 expect("get_guide_for_georgians_in_us returns key facts", Array.isArray(tax.key_facts) && tax.key_facts.length >= 3);
 
 const ez = await call("get_guide_for_georgians_in_us", { slug: "ezpass" });
